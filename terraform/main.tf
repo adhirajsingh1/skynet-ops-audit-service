@@ -16,6 +16,7 @@ resource "aws_security_group" "audit_service_sg" {
   description = "Allow HTTP traffic"
 
   ingress {
+    
     from_port   = 3000
     to_port     = 3000
     protocol    = "tcp"

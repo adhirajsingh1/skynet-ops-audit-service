@@ -89,21 +89,19 @@ Example:
 ```
 skynet-ops-audit-service
 │
-├── app
-│   └── server.js
+├── app/                  # Node.js application
 │
-├── docker
-│   └── Dockerfile
+├── docker/               # Dockerfile
 │
-├── terraform
-│   └── main.tf
-│
-├── docs
+├── docs/
 │   ├── architecture.md
 │   ├── cost-estimation.md
-│   └── runbook.md
+│   └── ops-runbook.md
 │
-├── .env.example
+├── terraform/            # Infrastructure as Code
+│
+├── .github/workflows/    # CI pipeline
+│
 ├── docker-compose.yml
 ├── package.json
 └── README.md
@@ -200,6 +198,12 @@ Monitoring is implemented through:
 * CloudWatch monitoring
 * Health check endpoint
 
+Detailed Observability in:
+
+```
+docs/observability.md
+```
+
 ---
 
 # Cost Optimization
@@ -248,12 +252,48 @@ Example file:
 
 ---
 
-# Future Improvements
+# Infrastructure (Terraform)
 
-Possible enhancements:
+Terraform is used to define AWS infrastructure.
 
-* Managed database (Amazon RDS or DynamoDB)
-* CI/CD pipeline with GitHub Actions
-* Authentication and API security
-* Distributed tracing and advanced monitoring
+Resources created:
 
+```
+ECS Cluster
+
+ECR Repository
+
+CloudWatch Log Group
+```
+Initialize Terraform
+
+```
+cd terraform
+terraform init
+```
+
+Validate configuration
+
+```
+terraform validate
+```
+
+---
+
+# CI Pipeline
+
+GitHub Actions pipeline runs on every push and performs:
+
+```
+Install Node dependencies
+
+Build Docker image
+
+Validate Terraform configuration
+```
+
+Pipeline configuration:
+
+```
+.github/workflows/ci.yml
+```

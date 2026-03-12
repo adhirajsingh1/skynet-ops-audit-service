@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t skynet-audit-service .
+        run: docker build -t skynet-audit-service -f docker/Dockerfile .
 
   terraform-validate:
     runs-on: ubuntu-latest

@@ -130,7 +130,7 @@ Logging/Monitoring: AWS CloudWatch Logs
 Secrets: Environment variables (.env)
 Budgeting/Alerts: Documented in cost report
 Container Registry: AWS ECR
-IAM / Service Account: ECS task roles (planned)
+IAM / Service Account: ECS task roles for Fargate tasks
 
 Why I chose this architecture
 
@@ -258,6 +258,7 @@ terraform destroy
 3. Monitoring dashboards not fully implemented
 4. CI pipeline does not push Docker images to ECR
 5. Autoscaling configuration not implemented
+6. Serverless is not suitable for high frequency workloads
 
 ---
 
@@ -269,6 +270,7 @@ AI tools used
 
 What I used AI for
 
+• Creating the service
 • DevOps architecture guidance
 • Documentation structure
 • Solving errors

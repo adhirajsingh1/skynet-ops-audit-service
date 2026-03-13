@@ -8,7 +8,7 @@ Chosen Cloud Platform: AWS
 Assessment Level Submitted: Level 1 + Level 2
 Level 2 Option Chosen: Option B — CI/CD for Safe Cloud Deployments
 GitHub Repo Link: https://github.com/adhirajsingh1/skynet-ops-audit-service
-Demo Video Link: (add after recording)
+Demo Video Link: https://drive.google.com/file/d/1nqg9bTiZP-K-CJjt7OG-YQ3AmrlC7mfT/view?usp=sharing
 Submission Date (UTC): 2026-03-13
 
 ---
